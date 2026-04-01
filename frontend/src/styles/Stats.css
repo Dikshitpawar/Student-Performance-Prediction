@@ -1,0 +1,78 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 80px 70px;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+}
+
+/* ================= CARD ================= */
+
+.stat-box {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(37, 99, 235, 0.15);
+}
+
+/* NUMBER */
+.stat-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.stat-box p {
+  font-size: 16px;
+  color: #555;
+  letter-spacing: 0.4px;
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media (max-width: 1024px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 40px;
+  }
+
+  .stat-box h2 {
+    font-size: 36px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .stat-box {
+    padding: 30px 20px;
+  }
+
+  .stat-box h2 {
+    font-size: 32px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+
+  /* Disable hover lift on touch devices */
+  .stat-box:hover {
+    transform: none;
+  }
+}

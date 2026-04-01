@@ -1,0 +1,45 @@
+/* ── Unified Login additions (extends existing Auth.css) ────────── */
+
+/* Wider card for tabs */
+.unified-login-card {
+  max-width: 460px !important;
+}
+
+/* Role tabs */
+.role-tabs {
+  display: flex;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 22px;
+  gap: 0;
+}
+
+.role-tab {
+  flex: 1;
+  padding: 10px 8px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.role-tab:hover { color: #374151; }
+
+.role-tab.active {
+  /* color and border-bottom set inline per-tab */
+  font-weight: 700;
+}
+
+/* Hint text below form */
+.login-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 14px;
+  line-height: 1.6;
+}

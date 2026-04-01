@@ -1,0 +1,150 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 70px;              /* 🔥 fixed height */
+  padding: 0 60px;           /* vertical padding remove */
+  background: linear-gradient(135deg, #cce0f9, #cce0f9);
+  transition: all 0.3s ease;
+}
+
+/* Scroll ke baad */
+.navbar.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  transition: color 0.3s;
+}
+
+.navbar.scrolled .logo {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  font-size: 16px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: #4f46e5;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  border: none;
+  font-size: 16px;
+  background: #ef4444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar.scrolled .btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+/* ================= MOBILE ================= */
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 25px;
+    height: 65px; /* stable height */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px; /* match navbar height */
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+/* ── Role badges in Navbar ──────────────────────────────────────── */
+/* Paste these rules at the BOTTOM of your existing Navbar.css file */
+
+.nav-role-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.faculty-badge {
+  background: rgba(5, 150, 105, 0.12);
+  color: #065f46;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+.admin-badge {
+  background: rgba(79, 70, 229, 0.1);
+  color: #3730a3;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+/* On scrolled/dark navbar, invert badge styles */
+.navbar.scrolled .faculty-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar.scrolled .admin-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}

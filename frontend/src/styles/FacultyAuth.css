@@ -1,0 +1,87 @@
+/* ── Faculty Auth Pages (Login + Set Password) ────────────────── */
+.faculty-auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+  padding: 20px;
+}
+
+.faculty-auth-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.faculty-auth-icon { font-size: 48px; margin-bottom: 12px; }
+
+.faculty-auth-card h2 {
+  color: #064e3b;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.faculty-auth-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.faculty-form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.faculty-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.faculty-form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.faculty-form-group input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.faculty-btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #059669;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+.faculty-btn-primary:hover:not(:disabled) { background: #047857; }
+.faculty-btn-primary:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.faculty-auth-note {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 18px;
+}

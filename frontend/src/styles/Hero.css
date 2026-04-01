@@ -1,0 +1,175 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+  gap: 40px;
+}
+
+/* ================= LEFT ================= */
+
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.tag {
+  background: #e0e7ff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #4338ca;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: 55px;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-outline{
+  margin-top: 10px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+}
+/* ================= RIGHT ================= */
+
+.hero-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  background: #22c55e;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .badge {
+    position: static;
+    margin-top: 15px;
+    display: inline-block;
+  }
+}

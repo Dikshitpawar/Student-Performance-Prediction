@@ -1,0 +1,45 @@
+.features-section {
+  padding: 90px 80px;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+}
+
+/* ================= GRID ================= */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Desktop Large */
+  gap: 30px;
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media (max-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .features-section {
+    padding: 70px 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .features-grid {
+    gap: 20px;
+  }
+}

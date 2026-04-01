@@ -1,0 +1,208 @@
+/* ===== WRAPPER ===== */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#eef2ff,#f8fbff);
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px; /* important for small screens */
+}
+
+/* ===== CARD BASE ===== */
+.auth-card,
+.sign-up-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Bigger width only for signup on large screens */
+.sign-up-card {
+  max-width: 550px;
+}
+
+/* ===== HEADINGS ===== */
+.auth-card h2,
+.sign-up-card h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.subtitle {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ===== ICON ===== */
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #4f46e5;
+  color: white;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin: 0 auto 10px;
+}
+
+/* ===== FORM ===== */
+.auth-card form,
+.sign-up-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card label,
+.sign-up-card label {
+  font-size: 14px;
+  margin: 8px 0 3px;
+  font-weight: 500;
+}
+
+/* INPUT */
+.auth-card input,
+.auth-card select,
+.sign-up-card input,
+.sign-up-card select {
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 0 12px;
+  outline: none;
+  margin-bottom: 8px;
+  transition: 0.2s ease;
+  background: #f9fafb;
+}
+
+.auth-card input:focus,
+.auth-card select:focus,
+.sign-up-card input:focus,
+.sign-up-card select:focus {
+  border: 1px solid #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.1);
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+  height: 45px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+/* ===== SWITCH TEXT ===== */
+.switch-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* ===== GRID FORM ===== */
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.full{
+  grid-column: span 2;
+}
+
+/* ===== TABLET ===== */
+@media(max-width:1024px){
+  .sign-up-card{
+    max-width: 480px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  .auth-card,
+  .sign-up-card{
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .auth-card h2,
+  .sign-up-card h2{
+    font-size: 22px;
+  }
+
+  .icon{
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .form-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .full{
+    grid-column: span 1;
+  }
+
+  .btn-primary{
+    height: 42px;
+    font-size: 14px;
+  }
+
+}
+
+/* ===== SMALL MOBILE ===== */
+@media(max-width:480px){
+
+  .auth-card,
+  .sign-up-card{
+    padding: 20px 15px;
+  }
+
+  .subtitle{
+    font-size: 13px;
+  }
+
+  .auth-card input,
+  .auth-card select,
+  .sign-up-card input,
+  .sign-up-card select{
+    height: 40px;
+    font-size: 14px;
+  }
+
+}

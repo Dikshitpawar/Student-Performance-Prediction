@@ -1,0 +1,353 @@
+.history-wrapper {
+  padding: 30px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  background: #f4f6fb;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+  .head h2{
+    margin: 10px 0;
+  }
+
+.header-btns button {
+  background: #3b6df6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.record {
+  background: #dbe4ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.performance-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-top: 6px solid #3b6df6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.perf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.good {
+  background: #dbe4ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.improved {
+  color: green;
+  font-size: 13px;
+}
+
+.actions svg {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.box {
+  background: #f3f4f8;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.analysis {
+  background: #e8edf6;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.analysis h3 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.weak {
+  background: #fdeaea;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.suggest {
+  background: #e6f4ea;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+.wrapper-class{
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.edit-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.edit-card{
+background:#fff;
+padding:25px;
+width:350px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.edit-card input,
+.edit-card textarea{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.modal-btns{
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+}
+
+.modal-btns button{
+padding:8px 14px;
+border:none;
+background:#4f46e5;
+color:#fff;
+border-radius:6px;
+cursor:pointer;
+}
+
+
+
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+  .history-wrapper {
+    padding: 15px;
+  }
+
+  .wrapper-class {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .performance-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  /* Header compact */
+.perf-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LEFT SIDE (DATE) */
+.date-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+/* CENTER (BADGES) */
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;   /* 👈 important */
+}
+
+/* PREDICTION BADGE */
+.good {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* DYNAMIC COLORS */
+.good.at-risk {
+  background: #fde2e2;
+  color: #dc2626;
+}
+
+.good.good-performance {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.good.average {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+/* IMPROVED */
+.improved {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #16a34a;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* DELETE */
+.actions {
+  justify-self: end;
+  cursor: pointer;
+}
+
+  /* Subject block smaller */
+  .analysis {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .analysis h3 {
+    font-size: 16px;
+  }
+
+  /* 4 boxes → 1 column */
+  .perf-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .box {
+    padding: 12px;
+  }
+
+  .box h3 {
+    font-size: 16px;
+  }
+
+  /* Weak + Suggest → stack */
+  .bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .weak,
+  .suggest {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Header section stack */
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-btns button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .record {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .performance-card {
+    padding: 14px;
+  }
+
+    .perf-header {
+    grid-template-columns: 1fr auto;
+    row-gap: 6px;
+  }
+
+  .status-row {
+    grid-column: 1 / 2;
+  }
+
+
+  .actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .performance-card {
+    position: relative;
+  }
+
+  .analysis,
+  .box,
+  .weak,
+  .suggest {
+    border-radius: 12px;
+  }
+
+  .analysis h3,
+  .box h3 {
+    font-size: 16px;
+  }
+
+}
+

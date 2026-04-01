@@ -1,0 +1,245 @@
+.predict-container {
+  background: #f5f8ff;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ================= CARD ================= */
+
+.predict-card,
+.result-card {
+  background: white;
+  max-width: 650px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+
+
+/* ================= FORM ================= */
+
+.predict-card h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.predict-card p {
+  color: #555;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-top .back-btn {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+label {
+  font-weight: 500;
+  margin-top: 18px;
+  display: block;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.pred-btn-primary {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background: linear-gradient(90deg,#2563eb,#4f46e5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pred-btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ================= RESULT ================= */
+
+.result-card h3 {
+  color: #2563eb;
+  font-size: 24px;
+}
+
+.risk {
+  color: #dc2626;
+  margin: 15px 0;
+}
+
+.safe {
+  color: #16a34a;
+  margin: 15px 0;
+}
+
+.result-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+.result-card .top-sec .score {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.box {
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.warning {
+  background: #fff7ed;
+  border-left: 4px solid #f59e0b;
+}
+
+.danger {
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+}
+
+.success {
+  background: #ecfdf5;
+  border-left: 4px solid #22c55e;
+}
+
+.box ul {
+  margin-left: 18px;
+}
+
+.pred-btn-outline {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #1f2937;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.pred-btn-outline:hover {
+  opacity: 0.9;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+  .predict-container {
+    padding: 60px 20px;
+  }
+
+  .predict-card,
+  .result-card {
+    padding: 30px;
+  }
+
+  .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-top .back-btn {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+  .predict-card h2 {
+    font-size: 26px;
+  }
+
+  .predict-card p {
+    font-size: 16px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .predict-container {
+    padding: 50px 15px;
+  }
+
+  .predict-card,
+  .result-card {
+    padding: 25px 18px;
+    border-radius: 14px;
+  }
+
+  .predict-card h2 {
+    font-size: 22px;
+  }
+
+  .predict-card p {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .pred-btn-primary {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .box {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .pred-btn-outline {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
