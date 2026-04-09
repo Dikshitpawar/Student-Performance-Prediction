@@ -6,7 +6,7 @@ export const authContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 
-    const url = "http://localhost:3000";
+    const url = "https://student-performance-prediction-backend-1bst.onrender.com";
 
     const [token, setToken] = useState(localStorage.getItem("token") || null);
     const [student , setStudent] = useState(localStorage.getItem("student") || null);
