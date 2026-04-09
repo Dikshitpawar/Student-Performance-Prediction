@@ -112,23 +112,94 @@ const FacultyStudentDetail = () => {
   };
 
   // ── Delete handler ─────────────────────────────────────────────────────────
-  const deletePred = async (predId) => {
-    if (!window.confirm('Delete this prediction record from database?')) return;
-    try {
-      setDeletingId(predId);
-      // Calls DELETE /api/faculty/predictions/:id
-      const res = await api.delete(`/api/faculty/predictions/${predId}`);
-      if (res.data.success) {
-        // Remove from local state immediately
-        setPredictions((prev) => prev.filter((p) => p._id !== predId));
-        toast.success('Prediction deleted successfully');
-      }
-    } catch (err) {
-      toast.error(err.response?.data?.message || 'Delete failed');
-    } finally {
-      setDeletingId(null);
-    }
-  };
+const deletePred = (predId) => {
+  toast((t) => (
+    <div
+      style={{
+        background: '#ffffff',
+        borderRadius: '8px',
+        padding: '12px 14px',
+        width: '280px',
+        border: '1px solid #e5e7eb',
+      }}
+    >
+      <p
+        style={{
+          margin: 0,
+          fontSize: '18px',
+          fontWeight: '500',
+          color: '#111827',
+        }}
+      >
+        Delete this prediction record?
+      </p>
+
+      <p
+        style={{
+          margin: '4px 0 10px',
+          fontSize: '14px',
+          color: '#6b7280',
+        }}
+      >
+        This action cannot be undone.
+      </p>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          gap: '8px',
+        }}
+      >
+        <button
+          onClick={() => toast.dismiss(t.id)}
+          style={{
+            background: '#f3f4f6',
+            border: 'none',
+            padding: '6px 12px',
+            borderRadius: '6px',
+            fontSize: '13px',
+            cursor: 'pointer',
+          }}
+        >
+          Cancel
+        </button>
+
+        <button
+          onClick={async () => {
+            toast.dismiss(t.id);
+            try {
+              setDeletingId(predId);
+              const res = await api.delete(`/api/faculty/predictions/${predId}`);
+
+              if (res.data.success) {
+                setPredictions((prev) =>
+                  prev.filter((p) => p._id !== predId)
+                );
+                toast.success('Deleted successfully');
+              }
+            } catch (err) {
+              toast.error(err.response?.data?.message || 'Delete failed');
+            } finally {
+              setDeletingId(null);
+            }
+          }}
+          style={{
+            background: '#dc2626',
+            color: '#fff',
+            border: 'none',
+            padding: '6px 12px',
+            borderRadius: '6px',
+            fontSize: '13px',
+            cursor: 'pointer',
+          }}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  ));
+};
 
   // ── Helpers ────────────────────────────────────────────────────────────────
   const riskColor = (score) => {

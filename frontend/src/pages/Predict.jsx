@@ -88,7 +88,7 @@ const Predict = () => {
             <label>Assignment Marks</label>
             <input type="number" {...register("assignmentMarks")} placeholder="e.g. 40" />
 
-            <label>Study Hours</label>
+            <label>Study Hours/Week</label>
             <input type="number" {...register("studyHours")} placeholder="e.g. 5" />
 
             <button type="submit" className="pred-btn-primary">
